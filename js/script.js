@@ -12,7 +12,6 @@ async function getData() {
 
 getData();
 
-// Criar primeiro um exemplo de extensão
 extensions.map((extension, index) => 
   ``
 );

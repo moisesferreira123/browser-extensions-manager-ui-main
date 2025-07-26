@@ -66,6 +66,7 @@
   align-items: center;
   margin-top: 2rem;
   color: white;
+  margin-bottom: 1rem;
 }
 
 .button-style {
@@ -92,12 +93,125 @@
 .selected-button {
   background-color: var(--red500);
   border: 1px solid var(--red500);
+  color: var(--neutral900)
 }
 
 .selected-button:hover {
-  background-color: var(--red700);
-  border: 1px solid var(--red700);
+  background-color: var(--red400);
+  border: 1px solid var(--red400);
+}
+
+.extensions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.extension {
+  background-color: var(--neutral800);
+  border: 1px solid var(--neutral600);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
+.extension-header {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.extension-header h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.extension-header p {
+  font-size: 0.8rem;
+  color: var(--neutral300)
+}
+
+.extension-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-button {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: var(--neutral800);
+  border: 1px solid var(--neutral600);
+}
+
+.remove-button:hover {
+  background-color: var(--red500);
+  border: 1px solid var(--red500);
+  color: var(--neutral900);
+  cursor: pointer;
+}
+
+.switch-toggle {
+  position: relative;
+  width: 37px;
+  height: 20px;
+}
+
+.switch-toggle label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 20px;
+  border-radius: 50px;
+  background: var(--neutral600);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.switch-toggle label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.switch-toggle input[type="checkbox"]:checked + label {
+  background: var(--red500);
+}
+
+.switch-toggle input[type="checkbox"]:checked + label:after {
+  transform: translateX(17px);
+}
+
+.yep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 20px;
+  opacity: 0;
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media (max-width: 800px) {
+  .extensions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .extensions-grid {
+    grid-template-columns: 1fr;
+  }
+}
