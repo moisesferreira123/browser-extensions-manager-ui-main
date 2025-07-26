@@ -1,0 +1,103 @@
+:root {
+  /* Neutral: */
+  --neutral900: hsl(227, 75%, 14%);
+  --neutral800: hsl(226, 25%, 17%);
+  --neutral700: hsl(225, 23%, 24%);
+  --neutral600: hsl(226, 11%, 37%);
+  --neutral300: hsl(0, 0%, 78%);
+  --neutral200: hsl(217, 61%, 90%);
+  --neutral100: hsl(0, 0%, 93%);
+  --neutral0: hsl(200, 60%, 99%);
+  /* Red */
+  --red400: hsl(3, 86%, 64%);
+  --red500: hsl(3, 71%, 56%);
+  --red700: hsl(3, 77%, 44%);
+  /* Gradient */
+  --light-gradient: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dark-gradient {
+  background: var(--dark-gradient);
+  height: 100vh;
+}
+
+.light-gradient {
+  background: var(--light-gradient);
+}
+
+.global-container {
+  margin: 2rem auto;
+  max-width: 80vw;
+}
+
+.extensions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--neutral800);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+.change-theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--neutral700);
+}
+
+.change-theme:hover {
+  background-color: var(--neutral600);
+  cursor: pointer;
+}
+
+.extensions-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  color: white;
+}
+
+.button-style {
+  padding: 7px 15px;
+  border-radius: 30px;
+}
+
+.extensions-list-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dark-theme-button {
+  background-color: var(--neutral700);
+  color: white;
+  border: 1px solid var(--neutral600);
+}
+
+.dark-theme-button:hover {
+  background-color: var(--neutral600);
+  cursor: pointer;
+}
+
+.selected-button {
+  background-color: var(--red500);
+  border: 1px solid var(--red500);
+}
+
+.selected-button:hover {
+  background-color: var(--red700);
+  border: 1px solid var(--red700);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
