@@ -10,7 +10,7 @@ const buttonDark = document.querySelector('.change-theme-light');
 
 async function getData() {
   try {
-    const response = await fetch("/data.json");
+    const response = await fetch("data.json");
     const data = await response.json();
     extensions = [...data];
     showExtensions(extensions);
