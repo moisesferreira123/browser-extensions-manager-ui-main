@@ -1,9 +1,12 @@
 let extensions = [];
 let whichToShow = 'all';
+const body = document.querySelector('body')
 const extensionsGrid = document.querySelector('.extensions-grid');
 const allButton = document.getElementById('all');
 const activeButton = document.getElementById('active');
 const inactiveButton = document.getElementById('inactive');
+const buttonLight = document.querySelector('.change-theme');
+const buttonDark = document.querySelector('.change-theme-light');
 
 async function getData() {
   try {
@@ -31,7 +34,7 @@ function showExtensions(extensionsToShow) {
         </div>
         <div class="extension-footer">
           <button class="remove-button">Remove</button>
-          <div class="switch-toggle">
+          <div tabindex="0" class="switch-toggle">
             <input class="yep" type="checkbox" id="switch-${index}" ${extension.isActive ? 'checked' : ''}>
             <label for="switch-${index}"></label>
           </div>
@@ -40,6 +43,14 @@ function showExtensions(extensionsToShow) {
     `;
   }).join('');
   extensionsGrid.innerHTML = html;
+}
+
+function changeToLight() {
+  body.classList.add('light');
+}
+
+function changeToDark() {
+  body.classList.remove('light');
 }
 
 function changeToAll() {
@@ -99,6 +110,10 @@ document.addEventListener('click', (event) => {
     showExtensions(extensions);
   }
 });
+
+buttonLight.addEventListener('click', changeToLight);
+
+buttonDark.addEventListener('click', changeToDark);
 
 allButton.addEventListener('click', changeToAll);
 

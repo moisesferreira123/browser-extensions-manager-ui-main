@@ -49,13 +49,22 @@ body.light {
   border-radius: 10px;
 }
 
+body.light .extensions {
+  display: none;
+}
+
 .extensions-light {
+  display: none;
+}
+
+body.light .extensions-light {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .change-theme {
@@ -65,11 +74,18 @@ body.light {
   padding: 0.5rem;
   border-radius: 10px;
   background-color: var(--neutral700);
+  border: none;
 }
 
 .change-theme:hover {
   background-color: var(--neutral600);
   cursor: pointer;
+}
+
+.change-theme:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
+  background-color: var(--neutral600);
 }
 
 .change-theme-light {
@@ -79,6 +95,7 @@ body.light {
   padding: 0.5rem;
   border-radius: 10px;
   background-color: var(--neutral100);
+  border: none;
 }
 
 .change-theme-light:hover {
@@ -86,8 +103,9 @@ body.light {
   cursor: pointer;
 }
 
-.hidden {
-  display: none;
+.change-theme-light:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
 }
 
 .extensions-list {
@@ -104,11 +122,12 @@ body.light .extensions-list {
 }
 
 .button-style {
-  padding: 7px 15px;
+  padding: 8px 15px;
   border-radius: 30px;
   background-color: var(--neutral700);
   color: white;
   border: 1px solid var(--neutral600);
+  line-height: 1;
 }
 
 .button-style:hover {
@@ -116,18 +135,31 @@ body.light .extensions-list {
   cursor: pointer;
 }
 
+.button-style:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
+  background-color: var(--neutral600);
+}
+
 body.light .button-style {
-  padding: 7px 15px;
+  padding: 8px 15px;
   border-radius: 30px;
   background-color: white;
   color: var(--neutral900);
   border: 1px solid var(--neutral200);
+  line-height: 1;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 body.light .button-style:hover {
   background-color: var(--neutral0);
   color: var(--neutral600);
   cursor: pointer;
+}
+
+.body.light .button-style:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
 }
 
 .extensions-list-buttons {
@@ -142,6 +174,11 @@ body.light .button-style:hover {
 }
 
 .selected-button:hover {
+  background-color: var(--red400);
+  border: 1px solid var(--red400);
+}
+
+.selected-button:focus {
   background-color: var(--red400);
   border: 1px solid var(--red400);
 }
@@ -165,6 +202,9 @@ body.light .selected-button:hover {
 }
 
 .extension {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: var(--neutral800);
   border: 1px solid var(--neutral600);
   padding: 0.8rem;
@@ -173,10 +213,13 @@ body.light .selected-button:hover {
 
 /* Colocar border-shadow */
 body.light .extension {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border: 1px solid var(--neutral200);
   padding: 0.8rem;
   border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 .extension-header {
@@ -202,7 +245,7 @@ body.light .extension-header {
 
 .extension-header p {
   font-size: 0.8rem;
-  color: var(--neutral300)
+  color: var(--neutral300);
 }
 
 body.light .extension-header p {
@@ -217,7 +260,7 @@ body.light .extension-header p {
 }
 
 .remove-button {
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 30px;
   font-size: 0.8rem;
   color: white;
@@ -232,8 +275,14 @@ body.light .extension-header p {
   cursor: pointer;
 }
 
+.remove-button:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
+  background-color: var(--neutral600);
+}
+
 body.light .remove-button {
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 30px;
   font-size: 0.8rem;
   color: var(--neutral900);
@@ -248,10 +297,23 @@ body.light .remove-button:hover {
   cursor: pointer;
 }
 
+body.light .remove-button:focus {
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
+  background-color: var(--neutral100);
+  border: 1px solid var(--neutral100);
+}
+
 .switch-toggle {
   position: relative;
   width: 37px;
   height: 20px;
+}
+
+.switch-toggle:focus {
+  border-radius: 50px;
+  outline: 2px solid var(--red500);
+  outline-offset: 1px;
 }
 
 /* Mudar a partir daqui */
@@ -263,6 +325,18 @@ body.light .remove-button:hover {
   height: 20px;
   border-radius: 50px;
   background: var(--neutral600);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+body.light .switch-toggle label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 37px;
+  height: 20px;
+  border-radius: 50px;
+  background: var(--neutral300);
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -283,6 +357,19 @@ body.light .remove-button:hover {
 .switch-toggle input[type="checkbox"]:checked + label {
   background: var(--red500);
 }
+
+.switch-toggle input[type="checkbox"]:checked + label:hover {
+  background: var(--red700);
+}
+
+body.light .switch-toggle input[type="checkbox"]:checked + label {
+  background: var(--red700);
+}
+
+body.light .switch-toggle input[type="checkbox"]:checked + label:hover {
+  background: var(--red500);
+}
+
 
 .switch-toggle input[type="checkbox"]:checked + label:after {
   transform: translateX(17px);
@@ -309,5 +396,13 @@ body.light .remove-button:hover {
 @media (max-width: 600px) {
   .extensions-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .extensions-list {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 }
