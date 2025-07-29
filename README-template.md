@@ -7,7 +7,7 @@ Esta é uma solução para o
 
 - [Visão geral](#visão-geral)
   - [O desafio](#o-desafio)
-  - [Imagem do projeto feito](#imagem-do-projeto-feito)
+  - [Imagens do projeto feito](#imagens-do-projeto-feito)
   - [Links](#links)
 - [Construído com](#construído-com)
 - [Autor](#autor)
@@ -29,17 +29,24 @@ Os usuários são capazes de:
 - Visualizar o layout ideal para a interface, dependendo do tamanho da tela do dispositivo
 - Ver os estados de foco e hover para todos os elementos interativos na página
 
-### Imagem do projeto feito
+### Imagens do projeto feito
 
-![Imagem do tema dark](./my-images/dark-theme.png)
-![Imagem do tema light](./my-images/light-theme.png)
-![Imagem do filtro ativo selecionado](./my-images/active-filter.png)
-![Imagem do filtro inativo selecionado](./my-images/inactive-filter.png)
+Imagem do tema dark
+![Imagem do tema dark](./assets/my-images/dark-theme.png)
+
+Imagem do tema light
+![Imagem do tema light](./assets/my-images/light-theme.png)
+
+Imagem do filtro ativo selecionado
+![Imagem do filtro ativo selecionado](./assets/my-images/active-filter.png)
+
+Imagem do filtro inativo selecionado
+![Imagem do filtro inativo selecionado](./assets/my-images/inactive-filter.png)
 
 ### Links
 
 - Solução URL: [URL da solução](https://github.com/moisesferreira123/browser-extensions-manager-ui-main)
-- Live Site URL: [Live site URL](https://moisesferreira123.github.io/interactive-rating-component-project/)
+- Live Site URL: [Live site URL]()
 
 
 ## Construído com
