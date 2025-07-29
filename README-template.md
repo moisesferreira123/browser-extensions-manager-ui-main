@@ -46,7 +46,7 @@ Imagem do filtro inativo selecionado
 ### Links
 
 - Solução URL: [URL da solução](https://github.com/moisesferreira123/browser-extensions-manager-ui-main)
-- Live Site URL: [Live site URL]()
+- Live Site URL: [Live site URL](https://moisesferreira123.github.io/browser-extensions-manager-ui-main/)
 
 
 ## Construído com
