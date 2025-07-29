@@ -29,6 +29,12 @@ body {
   background: var(--dark-gradient);
 }
 
+body.light {
+  height: 100%;
+  min-height: 100vh;
+  background: var(--light-gradient);
+}
+
 .global-container {
   margin: 2rem auto;
   max-width: 80vw;
@@ -39,6 +45,15 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: var(--neutral800);
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+}
+
+.extensions-light {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
   padding: 0.2rem 0.5rem;
   border-radius: 10px;
 }
@@ -57,6 +72,24 @@ body {
   cursor: pointer;
 }
 
+.change-theme-light {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background-color: var(--neutral100);
+}
+
+.change-theme-light:hover {
+  background-color: var(--neutral300);
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
 .extensions-list {
   display: flex;
   justify-content: space-between;
@@ -64,6 +97,10 @@ body {
   margin-top: 2rem;
   color: white;
   margin-bottom: 1rem;
+}
+
+body.light .extensions-list {
+  color: var(--neutral900);
 }
 
 .button-style {
@@ -79,6 +116,20 @@ body {
   cursor: pointer;
 }
 
+body.light .button-style {
+  padding: 7px 15px;
+  border-radius: 30px;
+  background-color: white;
+  color: var(--neutral900);
+  border: 1px solid var(--neutral200);
+}
+
+body.light .button-style:hover {
+  background-color: var(--neutral0);
+  color: var(--neutral600);
+  cursor: pointer;
+}
+
 .extensions-list-buttons {
   display: flex;
   gap: 0.5rem;
@@ -87,12 +138,24 @@ body {
 .selected-button {
   background-color: var(--red500);
   border: 1px solid var(--red500);
-  color: var(--neutral900)
+  color: var(--neutral900);
 }
 
 .selected-button:hover {
   background-color: var(--red400);
   border: 1px solid var(--red400);
+}
+
+body.light .selected-button {
+  background-color: var(--red700);
+  border: 1px solid var(--red700);
+  color: white;
+}
+
+body.light .selected-button:hover {
+  background-color: var(--red500);
+  border: 1px solid var(--red500);
+  color: white;
 }
 
 .extensions-grid {
@@ -108,11 +171,27 @@ body {
   border-radius: 10px;
 }
 
+/* Colocar border-shadow */
+body.light .extension {
+  background-color: white;
+  border: 1px solid var(--neutral200);
+  padding: 0.8rem;
+  border-radius: 10px;
+}
+
 .extension-header {
   display: flex;
   align-items: start;
   gap: 10px;
   color: white;
+  margin-bottom: 2rem;
+}
+
+body.light .extension-header {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  color: var(--neutral900);
   margin-bottom: 2rem;
 }
 
@@ -124,6 +203,11 @@ body {
 .extension-header p {
   font-size: 0.8rem;
   color: var(--neutral300)
+}
+
+body.light .extension-header p {
+  font-size: 0.8rem;
+  color: var(--neutral600)
 }
 
 .extension-footer {
@@ -148,12 +232,29 @@ body {
   cursor: pointer;
 }
 
+body.light .remove-button {
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  color: var(--neutral900);
+  background-color: white;
+  border: 1px solid var(--neutral300);
+}
+
+body.light .remove-button:hover {
+  background-color: var(--red700);
+  border: 1px solid var(--red700);
+  color: white;
+  cursor: pointer;
+}
+
 .switch-toggle {
   position: relative;
   width: 37px;
   height: 20px;
 }
 
+/* Mudar a partir daqui */
 .switch-toggle label {
   position: absolute;
   top: 0;
